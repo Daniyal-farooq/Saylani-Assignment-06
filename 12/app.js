@@ -13,13 +13,17 @@ console.log("The number of digits is ".concat(digits));
 console.log("Number of iterations are ".concat(l));
 n = parseInt(userValue);
 var counter = 1;
+var sum = 0;
 while (n > 0) {
     if (counter == 1) {
-        console.log(parseInt(n % 10));
+        console.log("The last digit is", parseInt(n % 10));
+        sum += parseInt(n % 10);
     }
     if (counter == l) {
-        console.log(parseInt(n % 10));
+        console.log("The first digit is", parseInt(n % 10));
+        sum += parseInt(n % 10);
     }
     n = parseInt(n / 10);
     counter++;
 }
+console.log("The sum of first and last digit is ", sum);
